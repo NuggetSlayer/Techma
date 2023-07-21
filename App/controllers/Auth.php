@@ -26,7 +26,7 @@ class Auth extends Controller{
 
         if ($this->model('Admin_model')->addAdmin($_POST) > 0) {
             Flasher::setFlash('Successfully Added','success');
-            header('location:' . BASEURL . '/Auth/RegisterPage');
+            header('location:' . BASEURL . '/Auth');
             exit;
         }else {
             Flasher::setFlash('Failed To Add','error');
