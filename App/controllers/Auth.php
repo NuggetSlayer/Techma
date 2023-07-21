@@ -36,12 +36,7 @@ class Auth extends Controller{
     }
 
     function Login(){
-
-        if ($this->model('Admin_model')->LoginAdmin($_POST) > 0) {
-            header('location:' . BASEURL . '/Index');
-            exit;
-        }
-        
+        $this->model('Admin_model')->LoginAdmin($_POST);
     }
 
     function LogOut(){

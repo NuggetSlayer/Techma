@@ -83,6 +83,7 @@ class Admin_model
                 exit;
 
             }
+            
         } else {
             Flasher::setFlash('Email Not Found', 'error');
             header('location:' . BASEURL . '/Auth');
